@@ -56,7 +56,10 @@ while turn_off:
     if user_choice == "off":
         turn_off = False
     elif user_choice == "report":
-        print(resources)
+        print(f"Water: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: ${resources['money']}")
     elif user_choice == "espresso" or "latte" or "cappuccino":
         if resource_check(user_choice) is False:
             continue
