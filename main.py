@@ -54,7 +54,7 @@ def operation(user_choice):
 while turn_off:
     user_choice = input("What would you like? (espresso/latte/cappuccino)").lower()
     if user_choice == "off":
-        break
+        turn_off = False
     elif user_choice == "report":
         print(resources)
     elif user_choice == "espresso" or "latte" or "cappuccino":
