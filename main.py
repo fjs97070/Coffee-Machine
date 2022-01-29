@@ -6,7 +6,8 @@ nickles = 0.05
 pennies = 0.01
 turn_off = True
 
-def resource_check(user_choice):  
+def resource_check(user_choice):
+    """Takes user_choice Input and checks if resources are enough"""
     # check if enough resources are in the machine
     if resources["water"] > MENU[user_choice]["ingredients"]["water"] and resources["milk"] > MENU[user_choice]["ingredients"]["milk"] and resources["coffee"] > MENU[user_choice]["ingredients"]["coffee"]: 
         return True     
@@ -21,7 +22,8 @@ def resource_check(user_choice):
         return False
         
 
-def operation(user_choice):      
+def operation(user_choice):
+    """"Checks payment and manage resources"""      
     print("Please insert coins.")
     user_quarters = float(input("How many quarters?: "))
     user_dimes = float(input("How many dimes?: "))
